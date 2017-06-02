@@ -36,6 +36,6 @@ socket.on('error', function (error) {
 });
 
 socket.bind({port: mcast.port}, function () {
-    socket.setMulticastTTL(1)
+    socket.setMulticastTTL(1);
     socket.addMembership(mcast.ip);
 });
