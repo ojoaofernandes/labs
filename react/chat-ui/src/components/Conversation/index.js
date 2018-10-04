@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Message from '../Message';
+import MessageList from '../MessageList';
 
 import './index.css';
 
 const messages = [
-  { author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
-  { author: 'recipient', message: 'Nunc interdum erat lorem, ac semper nibh.' },
-  { author: 'user', message: 'Suspendisse id accumsan tellus, nec malesuada orci.' },
-  { author: 'user', message: 'Etiam interdum enim nec hendrerit aliquet.' },
-  { author: 'recipient', message: 'Integer consequat velit id lectus elementum, at tempus.' },
-  { author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
-  { author: 'recipient', message: 'Nunc interdum erat lorem, ac semper nibh.' },
-  { author: 'user', message: 'Suspendisse id accumsan tellus, nec malesuada orci.' },
-  { author: 'user', message: 'Etiam interdum enim nec hendrerit aliquet.' },
-  { author: 'recipient', message: 'Integer consequat velit id lectus elementum, at tempus.' },
+  { id: 'a', author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
+  { id: 'b', author: 'recipient', message: 'Nunc interdum erat lorem, ac semper nibh.' },
+  { id: 'c', author: 'user', message: 'Suspendisse id accumsan tellus, nec malesuada orci.' },
+  { id: 'd', author: 'user', message: 'Etiam interdum enim nec hendrerit aliquet.' },
+  { id: 'e', author: 'recipient', message: 'Integer consequat velit id lectus elementum, at tempus.' },
+  { id: 'f', author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
+  { id: 'g', author: 'recipient', message: 'Nunc interdum erat lorem, ac semper nibh.' },
+  { id: 'h', author: 'user', message: 'Suspendisse id accumsan tellus, nec malesuada orci.' },
+  { id: 'i', author: 'user', message: 'Etiam interdum enim nec hendrerit aliquet.' },
+  { id: 'j', author: 'recipient', message: 'Integer consequat velit id lectus elementum, at tempus.' },
 ];
 
 function Conversation({ className }) {
@@ -31,15 +31,7 @@ function Conversation({ className }) {
         </div>
       </div>
 
-      <div className="messages">
-        {messages.map(({ author, message }, index) => (
-          <Message
-            key={index}
-            className={author === 'recipient' ? 'from' : 'to'}
-            message={message}
-          />
-        ))}
-      </div>
+      <MessageList messages={messages} />
 
       <div className="sender">
         <textarea />
