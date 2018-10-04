@@ -35,6 +35,24 @@
 
 .conversation .messages {
   flex-grow: 1;
+  padding: .75em;
+}
+
+.conversation .messages .message {
+  border: 1px solid #DDD;
+  border-radius: .3em;
+  display: inline-block;
+  margin-top: .75em;
+  padding: .5em;
+}
+
+.conversation .messages .from {
+  background-color: #CCC;
+}
+
+.conversation .messages .to {
+  background-color: #EEE;
+  float: right;
 }
 
 .conversation .sender {
@@ -45,7 +63,7 @@
 
 .conversation .sender textarea {
   border-color: #CCC;
-  border-radius: .5em;
+  border-radius: .3em;
   margin-right: .75em;
   width: 100%;
 }

@@ -16,10 +16,16 @@ function Conversation({ className }) {
           <button className="btn btn-secondary">&#x022EE;</button>
         </div>
       </div>
-      <div className="messages">messages</div>
+      <div className="messages">
+        <div className="message from">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+        <div className="message from">Nunc interdum erat lorem, ac semper nibh.</div>
+        <div className="message to">Suspendisse id accumsan tellus, nec malesuada orci.</div>
+        <div className="message to">Etiam interdum enim nec hendrerit aliquet.</div>
+        <div className="message from">Integer consequat velit id lectus elementum, at tempus.</div>
+      </div>
       <div className="sender">
         <textarea></textarea>
-        <button className="btn btn-success">Send</button>
+        <button className="btn btn-secondary">Send</button>
       </div>
     </div>
   );
