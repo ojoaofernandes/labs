@@ -3,9 +3,7 @@ import ContactList from '../ContactList';
 import Conversation from '../Conversation';
 
 const defautContact = {
-  lastMessage: 'Lorem ipsum dolor sit ame...',
-  online: false,
-  open: false,
+  lastMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
   onClick: () => { console.log('open conversation'); },
 };
 

@@ -2,17 +2,24 @@
   display: flex;
   align-items: center;
   border-top: 1px solid #DDD;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding: .5em;
 }
 
-.contact .thumb {
+.contact .initials {
   background-color: #AAA;
   border-radius: 100%;
-  margin: 0 .75em;
   padding: .7em .8em;
+}
+
+.contact .details {
+  margin-left: 0.5em;
+  min-width: 0;
 }
 
 .contact .last-message {
   color: #666;
+  font-size: .9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

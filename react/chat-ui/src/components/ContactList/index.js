@@ -29,8 +29,6 @@ ContactList.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     lastMessage: PropTypes.string.isRequired,
-    online: PropTypes.bool.isRequired,
-    open: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
   })).isRequired,
 };
