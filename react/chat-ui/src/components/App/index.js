@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="container-fluid h-100">
       <div className="row h-100">
-        <ContactList className="col-4 p-0 bg-info" contacts={contacts} />
+        <ContactList className="col-4 p-0" contacts={contacts} />
         <Conversation className="col-8 bg-warning" />
       </div>
     </div>

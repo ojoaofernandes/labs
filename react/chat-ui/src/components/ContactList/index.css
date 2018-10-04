@@ -1,0 +1,17 @@
+.contact-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-list .title {
+  text-align: center;
+}
+
+.contact-list .search-bar {
+  margin: .5em;
+}
+
+.contact-list .list {
+  flex-grow: 1;
+  overflow-y: auto;
+}

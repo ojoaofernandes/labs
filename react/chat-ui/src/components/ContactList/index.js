@@ -2,11 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Contact from '../Contact';
 
+import './index.css';
+
 function ContactList({ className, contacts }) {
   return (
-    <div className={className}>
-      <h2>Contact List</h2>
-      <div>
+    <div className={`${className} contact-list`}>
+      <h2 className="title">Heading</h2>
+      <div className="search-bar">
+        <input type="text" className="form-control" placeholder="Search..." />
+      </div>
+      <div className="list">
         {contacts.map((contact, index) => (
           <Contact key={index} {...contact} />
         ))}
