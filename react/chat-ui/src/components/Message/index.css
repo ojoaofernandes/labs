@@ -1,0 +1,10 @@
+.message {
+  margin-top: .75em;
+}
+
+.message span {
+  display: inline-block;
+  border: 1px solid #DDD;
+  border-radius: .3em;
+  padding: .5em;
+}

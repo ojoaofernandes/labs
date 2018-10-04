@@ -1,7 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Message from '../Message';
 
 import './index.css';
+
+const messages = [
+  { author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
+  { author: 'recipient', message: 'Nunc interdum erat lorem, ac semper nibh.' },
+  { author: 'user', message: 'Suspendisse id accumsan tellus, nec malesuada orci.' },
+  { author: 'user', message: 'Etiam interdum enim nec hendrerit aliquet.' },
+  { author: 'recipient', message: 'Integer consequat velit id lectus elementum, at tempus.' },
+  { author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
+  { author: 'recipient', message: 'Nunc interdum erat lorem, ac semper nibh.' },
+  { author: 'user', message: 'Suspendisse id accumsan tellus, nec malesuada orci.' },
+  { author: 'user', message: 'Etiam interdum enim nec hendrerit aliquet.' },
+  { author: 'recipient', message: 'Integer consequat velit id lectus elementum, at tempus.' },
+];
 
 function Conversation({ className }) {
   return (
@@ -18,21 +32,13 @@ function Conversation({ className }) {
       </div>
 
       <div className="messages">
-        <div className="message from">
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
-        </div>
-        <div className="message from">
-          <span>Nunc interdum erat lorem, ac semper nibh.</span>
-        </div>
-        <div className="message to">
-          <span>Suspendisse id accumsan tellus, nec malesuada orci.</span>
-        </div>
-        <div className="message to">
-          <span>Etiam interdum enim nec hendrerit aliquet.</span>
-        </div>
-        <div className="message from">
-          <span>Integer consequat velit id lectus elementum, at tempus.</span>
-        </div>
+        {messages.map(({ author, message }, index) => (
+          <Message
+            key={index}
+            className={author === 'recipient' ? 'from' : 'to'}
+            message={message}
+          />
+        ))}
       </div>
 
       <div className="sender">
