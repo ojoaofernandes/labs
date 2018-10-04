@@ -5,20 +5,7 @@ import MessageSender from '../MessageSender';
 
 import './index.css';
 
-const messages = [
-  { id: 'a', author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
-  { id: 'b', author: 'recipient', message: 'Nunc interdum erat lorem, ac semper nibh.' },
-  { id: 'c', author: 'user', message: 'Suspendisse id accumsan tellus, nec malesuada orci.' },
-  { id: 'd', author: 'user', message: 'Etiam interdum enim nec hendrerit aliquet.' },
-  { id: 'e', author: 'recipient', message: 'Integer consequat velit id lectus elementum, at tempus.' },
-  { id: 'f', author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
-  { id: 'g', author: 'recipient', message: 'Nunc interdum erat lorem, ac semper nibh.' },
-  { id: 'h', author: 'user', message: 'Suspendisse id accumsan tellus, nec malesuada orci.' },
-  { id: 'i', author: 'user', message: 'Etiam interdum enim nec hendrerit aliquet.' },
-  { id: 'j', author: 'recipient', message: 'Integer consequat velit id lectus elementum, at tempus.' },
-];
-
-function Conversation({ className }) {
+function Conversation({ className, messages }) {
   return (
     <div className={`${className} conversation`}>
       <div className="recipient">
