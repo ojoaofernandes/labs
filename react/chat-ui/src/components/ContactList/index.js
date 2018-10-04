@@ -7,7 +7,7 @@ import './index.css';
 function ContactList({ className, contacts }) {
   return (
     <div className={`${className} contact-list`}>
-      <h2 className="title">Heading</h2>
+      <h2 className="title">Contacts</h2>
       <div className="search-bar">
         <input type="text" className="form-control" placeholder="Search..." />
       </div>
@@ -28,7 +28,7 @@ ContactList.propTypes = {
   className: PropTypes.string,
   contacts: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    profile: PropTypes.string.isRequired,
+    lastMessage: PropTypes.string.isRequired,
     online: PropTypes.bool.isRequired,
     open: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
