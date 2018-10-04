@@ -6,16 +6,10 @@
   padding: .75em;
 }
 
-.conversation-details .initials {
-  background-color: #CCC;
-  border-radius: 100%;
-  padding: .7em .9em;
-}
-
-.conversation-details .details {
+.conversation-details .contact {
   flex-grow: 1;
-  margin-left: 0.75em;
-  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .conversation-details .last-message {

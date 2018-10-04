@@ -1,25 +1,10 @@
 .contact {
   display: flex;
   align-items: center;
-  border-top: 1px solid #CCC;
   padding: .5em;
 }
 
-.contact .initials {
-  background-color: #CCC;
-  border-radius: 100%;
-  padding: .7em .8em;
-}
-
-.contact .details {
+.contact .contact-details {
   margin-left: 0.5em;
   min-width: 0;
-}
-
-.contact .last-message {
-  color: #777;
-  font-size: .9em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

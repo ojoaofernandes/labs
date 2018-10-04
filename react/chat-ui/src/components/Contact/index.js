@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ContactInitials from '../ContactInitials';
+import ContactDetails from '../ContactDetails';
 
 import './index.css';
 
 function Contact({ name, lastMessage, onClick }) {
   return (
     <div className="contact" onClick={onClick}>
-      <div className="initials">{name.slice(0, 2).toUpperCase()}</div>
-      <div className="details">
-        <div>{name}</div>
-        <div className="last-message">{lastMessage}</div>
-      </div>
+      <ContactInitials name={name} />
+      <ContactDetails name={name} extra={lastMessage} />
     </div>
   );
 }

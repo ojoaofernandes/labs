@@ -27,6 +27,11 @@
 }
 
 .contact-list .list {
+  border-top: 1px solid #CCC;
   flex-grow: 1;
   overflow-y: auto;
+}
+
+.contact-list .contact {
+  border-bottom: 1px solid #CCC;
 }
