@@ -27,10 +27,16 @@ function Conversation({ className, messages }) {
 
 Conversation.defaultProps = {
   className: '',
+  messages: [],
 };
 
 Conversation.propTypes = {
   className: PropTypes.string,
+  messages: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    author: PropTypes.string,
+    message: PropTypes.string,
+  })),
 };
 
 export default Conversation;
