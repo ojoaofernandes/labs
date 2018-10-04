@@ -13,9 +13,10 @@ function Conversation({ className }) {
           <div className="last-message">last message at 13:53</div>
         </div>
         <div className="options">
-          <button className="btn btn-secondary">&#x022EE;</button>
+          <button type="button">&#x022EE;</button>
         </div>
       </div>
+
       <div className="messages">
         <div className="message from">
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
@@ -33,9 +34,10 @@ function Conversation({ className }) {
           <span>Integer consequat velit id lectus elementum, at tempus.</span>
         </div>
       </div>
+
       <div className="sender">
-        <textarea></textarea>
-        <button className="btn btn-secondary">Send</button>
+        <textarea />
+        <button type="button">Send</button>
       </div>
     </div>
   );
