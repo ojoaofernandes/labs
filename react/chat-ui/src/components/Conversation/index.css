@@ -5,43 +5,13 @@
 }
 
 .conversation .recipient {
-  align-items: center;
   border-bottom: 1px solid #CCC;
-  display: flex;
-  flex-direction: row;
-  padding: .75em;
 }
 
-.conversation .recipient .initials {
-  background-color: #CCC;
-  border-radius: 100%;
-  padding: .7em .9em;
-}
-
-.conversation .recipient .details {
+.conversation .message-list {
   flex-grow: 1;
-  margin-left: 0.75em;
-  min-width: 0;
 }
 
-.conversation .recipient .last-message {
-  color: #777;
-  font-size: .9em;
-}
-
-.conversation .recipient .options button {
-  background-color: #CCC;
-  border: 1px solid #CCC;
-  border-radius: .25em;
-  cursor: pointer;
-  padding: .4em .25em;
-}
-
-.conversation .recipient .options button:hover {
-  background-color: #AAA;
-  border-color: #AAA;
-}
-
-.conversation .messages {
-  flex-grow: 1;
+.conversation .message-sender {
+  border-top: 1px solid #CCC;
 }

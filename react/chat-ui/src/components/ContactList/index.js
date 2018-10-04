@@ -6,7 +6,7 @@ import './index.css';
 
 function ContactList({ className, contacts }) {
   return (
-    <div className={`${className} contact-list`}>
+    <div className={`contact-list ${className}`}>
       <h2 className="title">Contacts</h2>
       <div className="search-bar">
         <input type="text" placeholder="Search..." />
