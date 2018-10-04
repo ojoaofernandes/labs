@@ -17,11 +17,21 @@ function Conversation({ className }) {
         </div>
       </div>
       <div className="messages">
-        <div className="message from">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
-        <div className="message from">Nunc interdum erat lorem, ac semper nibh.</div>
-        <div className="message to">Suspendisse id accumsan tellus, nec malesuada orci.</div>
-        <div className="message to">Etiam interdum enim nec hendrerit aliquet.</div>
-        <div className="message from">Integer consequat velit id lectus elementum, at tempus.</div>
+        <div className="message from">
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+        </div>
+        <div className="message from">
+          <span>Nunc interdum erat lorem, ac semper nibh.</span>
+        </div>
+        <div className="message to">
+          <span>Suspendisse id accumsan tellus, nec malesuada orci.</span>
+        </div>
+        <div className="message to">
+          <span>Etiam interdum enim nec hendrerit aliquet.</span>
+        </div>
+        <div className="message from">
+          <span>Integer consequat velit id lectus elementum, at tempus.</span>
+        </div>
       </div>
       <div className="sender">
         <textarea></textarea>

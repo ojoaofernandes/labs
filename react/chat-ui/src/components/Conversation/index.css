@@ -34,25 +34,34 @@
 }
 
 .conversation .messages {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   padding: .75em;
 }
 
 .conversation .messages .message {
+  margin-top: .75em;
+}
+
+.conversation .messages .message span {
+  display: inline-block;
   border: 1px solid #DDD;
   border-radius: .3em;
-  display: inline-block;
-  margin-top: .75em;
   padding: .5em;
 }
 
-.conversation .messages .from {
-  background-color: #CCC;
+.conversation .messages .message.to {
+  text-align: right;
 }
 
-.conversation .messages .to {
+.conversation .messages .message.to span {
   background-color: #EEE;
-  float: right;
+  text-align: right;
+}
+
+.conversation .messages .message.from  span {
+  background-color: #CCC;
 }
 
 .conversation .sender {
