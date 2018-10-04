@@ -1,0 +1,27 @@
+.conversation {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.conversation .messages {
+  flex-grow: 1;
+}
+
+.conversation .sender {
+  border-top: 1px solid #CCC;
+  display: flex;
+  padding: .75em;
+}
+
+.conversation .sender textarea {
+  border-color: #CCC;
+  border-radius: .5em;
+  margin-right: .75em;
+  width: 100%;
+}
+
+.conversation .sender textarea:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
