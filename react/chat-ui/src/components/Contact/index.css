@@ -1,0 +1,18 @@
+.contact {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #DDD;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.contact .thumb {
+  background-color: #AAA;
+  border-radius: 100%;
+  margin: 0 .75em;
+  padding: .7em .8em;
+}
+
+.contact .last-message {
+  color: #666;
+}

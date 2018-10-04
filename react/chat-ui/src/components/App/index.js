@@ -3,7 +3,7 @@ import ContactList from '../ContactList';
 import Conversation from '../Conversation';
 
 const defautContact = {
-  profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+  lastMessage: 'Lorem ipsum dolor sit ame...',
   online: false,
   open: false,
   onClick: () => { console.log('open conversation'); },
