@@ -9,7 +9,7 @@ function ContactList({ className, contacts }) {
     <div className={`${className} contact-list`}>
       <h2 className="title">Contacts</h2>
       <div className="search-bar">
-        <input type="text" className="form-control" placeholder="Search..." />
+        <input type="text" placeholder="Search..." />
       </div>
       <div className="list">
         {contacts.map((contact, index) => (
