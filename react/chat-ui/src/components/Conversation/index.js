@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MessageList from '../MessageList';
+import MessageSender from '../MessageSender';
 
 import './index.css';
 
@@ -32,11 +33,7 @@ function Conversation({ className }) {
       </div>
 
       <MessageList messages={messages} />
-
-      <div className="sender">
-        <textarea />
-        <button type="button">Send</button>
-      </div>
+      <MessageSender />
     </div>
   );
 }

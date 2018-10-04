@@ -1,0 +1,30 @@
+.message-sender {
+  border-top: 1px solid #CCC;
+  display: flex;
+  padding: .75em;
+}
+
+.message-sender textarea {
+  border-color: #CCC;
+  border-radius: .3em;
+  margin-right: .75em;
+  width: 100%;
+}
+
+.message-sender textarea:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+  outline: 0;
+}
+
+.message-sender button {
+  background-color: #CCC;
+  border: 1px solid #CCC;
+  border-radius: .25em;
+  cursor: pointer;
+  padding: .4em .75em;
+}
+
+.message-sender button:hover {
+  background-color: #AAA;
+  border-color: #AAA;
+}
