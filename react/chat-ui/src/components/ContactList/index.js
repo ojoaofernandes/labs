@@ -14,8 +14,13 @@ function ContactList({ className, contacts }) {
       </div>
 
       <div className="list">
-        {contacts.map(contact => (
-          <Contact key={contact.id} {...contact} />
+        {contacts.map(({ id, name, lastMessage }) => (
+          <Contact
+            key={id}
+            name={name}
+            lastMessage={lastMessage.message}
+            onClick={() => console.log(`open conversation ${id}`)}
+          />
         ))}
       </div>
     </div>
@@ -29,10 +34,11 @@ ContactList.defaultProps = {
 ContactList.propTypes = {
   className: PropTypes.string,
   contacts: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    lastMessage: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
+    lastMessage: PropTypes.shape({
+      message: PropTypes.string.isRequired,
+      time: PropTypes.string.isRequired,
+    }).isRequired,
   })).isRequired,
 };
 

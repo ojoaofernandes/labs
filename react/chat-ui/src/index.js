@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import store from './configureStore';
+import { getContactList } from './actions/contactList';
 
 import './index.css';
 
@@ -13,3 +14,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
+
+store.dispatch(getContactList());
