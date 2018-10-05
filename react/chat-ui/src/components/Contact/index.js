@@ -14,10 +14,14 @@ function Contact({ name, lastMessage, onClick }) {
   );
 }
 
+Contact.defaultProps = {
+  onClick: null,
+};
+
 Contact.propTypes = {
   name: PropTypes.string.isRequired,
   lastMessage: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default Contact;

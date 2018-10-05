@@ -1,4 +1,5 @@
 .contact-list {
+  border-left: 1px solid #CCC;
   border-right: 1px solid #CCC;
   display: flex;
   flex-direction: column;
@@ -6,7 +7,7 @@
 }
 
 .contact-list .title {
-  margin: 0;
+  margin: .25em 0;
   text-align: center;
 }
 

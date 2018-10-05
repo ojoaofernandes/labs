@@ -2,6 +2,8 @@ import React from 'react';
 import ContactList from '../ContactList';
 import Conversation from '../Conversation';
 
+import './index.css';
+
 const defautContact = {
   lastMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
   onClick: () => { console.log('open conversation'); },
@@ -32,8 +34,8 @@ const messages = [
 
 function App() {
   return (
-    <div className="container-fluid h-100">
-      <div className="row h-100">
+    <div className="app container">
+      <div className="row">
         <ContactList className="col-4" contacts={contacts} />
         <Conversation className="col-8" messages={messages} />
       </div>
