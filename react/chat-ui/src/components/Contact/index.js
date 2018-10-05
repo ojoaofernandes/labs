@@ -5,9 +5,16 @@ import ContactDetails from '../ContactDetails';
 
 import './index.css';
 
-function Contact({ name, lastMessage, onClick }) {
+function Contact({ name, lastMessage, openConversation }) {
+  const clickProps = !openConversation ? {} : {
+    onClick: openConversation,
+    onKeyPress: openConversation,
+    role: 'button',
+    tabIndex: 0,
+  };
+
   return (
-    <div className="contact" onClick={onClick}>
+    <div className="contact" {...clickProps}>
       <ContactInitials name={name} />
       <ContactDetails name={name} extra={lastMessage} />
     </div>
@@ -15,13 +22,13 @@ function Contact({ name, lastMessage, onClick }) {
 }
 
 Contact.defaultProps = {
-  onClick: null,
+  openConversation: null,
 };
 
 Contact.propTypes = {
   name: PropTypes.string.isRequired,
   lastMessage: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  openConversation: PropTypes.func,
 };
 
 export default Contact;

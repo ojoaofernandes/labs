@@ -19,7 +19,7 @@ function ContactList({ className, contacts }) {
             key={id}
             name={name}
             lastMessage={lastMessage.message}
-            onClick={() => console.log(`open conversation ${id}`)}
+            openConversation={() => console.log(`open conversation ${id}`)}
           />
         ))}
       </div>

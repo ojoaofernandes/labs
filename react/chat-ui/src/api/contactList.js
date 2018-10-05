@@ -14,7 +14,7 @@ const defaultLastMessage = {
 };
 
 export const getContactList = () => defaultContacts.map((name, index) => ({
-  id: index+'',
+  id: index,
   name,
   lastMessage: { ...defaultLastMessage },
 }));
