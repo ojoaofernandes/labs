@@ -1,23 +1,8 @@
 import React from 'react';
-import ContactList from '../ContactList';
+import ContactList from '../../containers/ContactList';
 import Conversation from '../Conversation';
 
 import './index.css';
-
-const defautContact = {
-  lastMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
-  onClick: () => { console.log('open conversation'); },
-};
-
-const contacts = [
-  { ...defautContact, name: 'Alice' },
-  { ...defautContact, name: 'Bob' },
-  { ...defautContact, name: 'Carol' },
-  { ...defautContact, name: 'Dave' },
-  { ...defautContact, name: 'Eve' },
-  { ...defautContact, name: 'Faythe' },
-  { ...defautContact, name: 'Grace' },
-];
 
 const messages = [
   { id: 'a', author: 'recipient', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.' },
@@ -36,7 +21,7 @@ function App() {
   return (
     <div className="app container">
       <div className="row">
-        <ContactList className="col-4" contacts={contacts} />
+        <ContactList className="col-4" />
         <Conversation className="col-8" messages={messages} />
       </div>
     </div>

@@ -14,8 +14,8 @@ function ContactList({ className, contacts }) {
       </div>
 
       <div className="list">
-        {contacts.map((contact, index) => (
-          <Contact key={index} {...contact} />
+        {contacts.map(contact => (
+          <Contact key={contact.id} {...contact} />
         ))}
       </div>
     </div>
@@ -29,6 +29,7 @@ ContactList.defaultProps = {
 ContactList.propTypes = {
   className: PropTypes.string,
   contacts: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     lastMessage: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,

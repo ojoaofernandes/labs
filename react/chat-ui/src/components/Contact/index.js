@@ -5,9 +5,9 @@ import ContactDetails from '../ContactDetails';
 
 import './index.css';
 
-function Contact({ name, lastMessage, onClick }) {
+function Contact({ id, name, lastMessage, onClick }) {
   return (
-    <div className="contact" onClick={onClick}>
+    <div className="contact" onClick={onClick} data-id={id}>
       <ContactInitials name={name} />
       <ContactDetails name={name} extra={lastMessage} />
     </div>
@@ -19,6 +19,7 @@ Contact.defaultProps = {
 };
 
 Contact.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   lastMessage: PropTypes.string.isRequired,
   onClick: PropTypes.func,
