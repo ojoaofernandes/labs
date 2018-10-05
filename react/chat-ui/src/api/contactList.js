@@ -13,8 +13,10 @@ const defaultLastMessage = {
   time: '10:49',
 };
 
-export const getContactList = () => defaultContacts.map((name, index) => ({
-  id: index,
-  name,
-  lastMessage: { ...defaultLastMessage },
-}));
+export function getContactList() {
+  return defaultContacts.map(name => ({
+    id: name.charAt(0).toLocaleLowerCase(),
+    name,
+    lastMessage: { ...defaultLastMessage },
+  }));
+}
