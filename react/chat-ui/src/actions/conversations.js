@@ -5,7 +5,7 @@ export function openConversation(contact) {
     type: 'OPEN_CONVERSATION',
     payload: {
       recipient: contact,
-      messages: api.getConversationWith(contact.id),
+      messages: api.getConversationWith(contact.id).messages,
     },
   };
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Contact from '../Contact';
+import Contact from '../../containers/Contact';
 
 import './index.css';
 
@@ -14,12 +14,11 @@ function ContactList({ className, contacts }) {
       </div>
 
       <div className="list">
-        {contacts.map(({ id, name, lastMessage }) => (
+        {contacts.map(contact => (
           <Contact
-            key={id}
-            name={name}
-            lastMessage={lastMessage.message}
-            openConversation={() => console.log(`open conversation ${id}`)}
+            key={contact.id}
+            contact={contact}
+            extra={contact.lastMessage.message}
           />
         ))}
       </div>

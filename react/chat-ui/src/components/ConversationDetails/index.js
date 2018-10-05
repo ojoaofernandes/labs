@@ -6,7 +6,7 @@ import './index.css';
 function ConversationDetails() {
   return (
     <div className="conversation-details">
-      <Contact id="a" name="Alice" lastMessage="last message at 16:50" />
+      <Contact contact={{ id: 'a', name: 'Alice' }} extra="last message at 16:50" />
       <div className="options">
         <button type="button">&#x022EE;</button>
       </div>

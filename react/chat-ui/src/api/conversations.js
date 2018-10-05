@@ -1,6 +1,5 @@
 const conversations = [
   {
-    id: 'a',
     recipient: 'a',
     messages: [
       {
@@ -16,7 +15,6 @@ const conversations = [
     ],
   },
   {
-    id: 'b',
     recipient: 'b',
     messages: [
       {
