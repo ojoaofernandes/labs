@@ -19,6 +19,7 @@
 .message-sender button {
   background-color: #DDD;
   border: 1px solid #DDD;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
   border-radius: .25em;
   cursor: pointer;
   padding: .4em .75em;
