@@ -10,7 +10,7 @@ function Products({ className }) {
   );
 }
 
-PropTypes.defaultProps = {
+Products.defaultProps = {
   className: '',
 };
 
