@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Products from '../Products';
+import PropTypes from 'prop-types';
+import Products from '../../containers/Products';
 
 class App extends Component {
   componentDidMount() {
@@ -17,5 +18,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  getProducts: PropTypes.func.isRequired,
+};
 
 export default App;
