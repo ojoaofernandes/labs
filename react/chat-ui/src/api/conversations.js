@@ -30,5 +30,5 @@ const conversations = [
 ];
 
 export function getConversationWith(contact) {
-  return conversations.find(c => c.contact === contact);
+  return conversations.find(c => c.contact === contact) || {};
 }
