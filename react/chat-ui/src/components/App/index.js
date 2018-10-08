@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ContactList from '../../containers/ContactList';
-import Conversation from '../Conversation';
+import Conversation from '../../containers/Conversation';
 
 import './index.css';
 

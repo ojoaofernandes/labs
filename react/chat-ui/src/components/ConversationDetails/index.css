@@ -22,7 +22,7 @@
   border: 1px solid #CCC;
   border-radius: .25em;
   cursor: pointer;
-  padding: .4em .25em;
+  padding: .25em .5em;
 }
 
 .conversation-details .options button:hover {

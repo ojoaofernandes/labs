@@ -1,9 +1,8 @@
-export default function (state = {}, { type, payload }) {
+export default function (state = null, { type, payload }) {
   if (type === 'OPEN_CONVERSATION') {
-    return {
-      recipient: payload.contact,
-      messages: payload.messages,
-    };
+    const { contact, messages } = payload;
+
+    return { contact, messages };
   }
 
   return state;

@@ -10,7 +10,7 @@ function MessageList({ messages }) {
       {messages.map(({ id, author, message }) => (
         <Message
           key={id}
-          className={author === 'recipient' ? 'from' : 'to'}
+          className={author === 'contact' ? 'from' : 'to'}
           message={message}
         />
       ))}

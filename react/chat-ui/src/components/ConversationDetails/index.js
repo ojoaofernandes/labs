@@ -3,12 +3,14 @@ import Contact from '../Contact';
 
 import './index.css';
 
-function ConversationDetails({ contact, extra }) {
+function ConversationDetails({ contact }) {
+  const { lastMessage: { time } } = contact;
+
   return (
     <div className="conversation-details">
-      <Contact />
+      <Contact contact={contact} extra={`last message at ${time}`} />
       <div className="options">
-        <button type="button">&#x022EE;</button>
+        <button type="button">&times;</button>
       </div>
     </div>
   );

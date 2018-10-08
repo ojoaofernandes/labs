@@ -7,16 +7,15 @@ import MessageSender from '../MessageSender';
 import './index.css';
 
 function Conversation({ className, conversation }) {
-  if (conversation === undefined) {
+  if (conversation === null) {
     return <div className={`conversation ${className}`} />;
   }
 
   const { contact, messages } = conversation;
-  const extra = contact.lastMessage.time;
 
   return (
     <div className={`conversation ${className}`}>
-      <ConversationDetails contact={contact} extra={extra} />
+      <ConversationDetails contact={contact} />
       <MessageList messages={messages} />
       <MessageSender />
     </div>
