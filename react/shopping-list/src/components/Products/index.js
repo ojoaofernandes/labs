@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Product from '../Product';
 import './index.css';
 
 function Products({ className, products }) {
   return (
     <div className={`products ${className}`}>
-      {products.map(product => (
-        <div key={product.id}>{product.name}</div>
-      ))}
+      {products.map(product => <Product key={product.id} {...product} />)}
     </div>
   );
 }
