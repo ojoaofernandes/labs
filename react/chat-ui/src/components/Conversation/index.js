@@ -6,7 +6,7 @@ import MessageSender from '../MessageSender';
 
 import './index.css';
 
-function Conversation({ className, conversation }) {
+function Conversation({ className, conversation, closeConversation }) {
   if (conversation === null) {
     return <div className={`conversation ${className}`} />;
   }
@@ -15,7 +15,7 @@ function Conversation({ className, conversation }) {
 
   return (
     <div className={`conversation ${className}`}>
-      <ConversationDetails contact={contact} />
+      <ConversationDetails contact={contact} closeConversation={closeConversation} />
       <MessageList messages={messages} />
       <MessageSender />
     </div>
@@ -32,6 +32,7 @@ Conversation.propTypes = {
     contact: PropTypes.object,
     messages: PropTypes.array,
   }),
+  closeConversation: PropTypes.func.isRequired,
 };
 
 export default Conversation;

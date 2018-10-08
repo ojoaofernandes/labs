@@ -8,3 +8,9 @@ export function openConversation(contact) {
     payload: { contact, messages },
   };
 }
+
+export function closeConversation() {
+  return {
+    type: 'CLOSE_CONVERSATION',
+  };
+}
