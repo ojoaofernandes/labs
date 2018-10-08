@@ -4,13 +4,13 @@ import Contact from '../../containers/Contact';
 
 import './index.css';
 
-function ContactList({ className, contacts }) {
+function ContactList({ className, contacts, filterContactList }) {
   return (
     <div className={`contact-list ${className}`}>
       <h2 className="title">Contacts</h2>
 
       <div className="search-bar">
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..." onKeyUp={filterContactList} />
       </div>
 
       <div className="list">
@@ -39,6 +39,7 @@ ContactList.propTypes = {
       time: PropTypes.string.isRequired,
     }).isRequired,
   })).isRequired,
+  filterContactList: PropTypes.func.isRequired,
 };
 
 export default ContactList;
