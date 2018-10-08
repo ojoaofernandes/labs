@@ -37,3 +37,8 @@
 .contact-list .contact {
   border-bottom: 1px solid #DEDEDE;
 }
+
+.contact-list .contact:hover,
+.contact-list .contact:focus {
+  background-color: rgba(0, 0, 0, .04);
+}

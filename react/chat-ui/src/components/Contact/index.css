@@ -4,11 +4,6 @@
   padding: .5em;
 }
 
-.contact:hover,
-.contact:focus {
-  background-color: rgba(0, 0, 0, .04);
-}
-
 .contact .contact-details {
   margin-left: 0.5em;
   min-width: 0;
