@@ -1,11 +1,11 @@
 const conversations = [
   {
-    recipient: 'a',
+    contact: 'a',
     messages: [
       {
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         time: '09:10',
-        author: 'recipient',
+        author: 'contact',
       },
       {
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
@@ -15,7 +15,7 @@ const conversations = [
     ],
   },
   {
-    recipient: 'b',
+    contact: 'b',
     messages: [
       {
         message: 'Integer consequat velit id lectus elementum, at tempus.',
@@ -26,6 +26,6 @@ const conversations = [
   },
 ];
 
-export function getConversationWith(recipient) {
-  return conversations.find(c => c.recipient === recipient);
+export function getConversationWith(contact) {
+  return conversations.find(c => c.contact === contact);
 }

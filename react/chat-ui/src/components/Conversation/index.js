@@ -6,10 +6,17 @@ import MessageSender from '../MessageSender';
 
 import './index.css';
 
-function Conversation({ className, messages }) {
+function Conversation({ className, conversation }) {
+  if (conversation === undefined) {
+    return <div className={`conversation ${className}`} />;
+  }
+
+  const { contact, messages } = conversation;
+  const extra = contact.lastMessage.time;
+
   return (
     <div className={`conversation ${className}`}>
-      <ConversationDetails />
+      <ConversationDetails contact={contact} extra={extra} />
       <MessageList messages={messages} />
       <MessageSender />
     </div>
@@ -18,16 +25,14 @@ function Conversation({ className, messages }) {
 
 Conversation.defaultProps = {
   className: '',
-  messages: [],
 };
 
 Conversation.propTypes = {
   className: PropTypes.string,
-  messages: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    author: PropTypes.string,
-    message: PropTypes.string,
-  })),
+  converstion: PropTypes.shape({
+    contact: PropTypes.object,
+    messages: PropTypes.array,
+  }),
 };
 
 export default Conversation;
