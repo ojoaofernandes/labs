@@ -1,12 +1,12 @@
 .conversation {
-  border-right: 1px solid #CCC;
+  border-right: 1px solid #DEDEDE;
   display: flex;
   flex-direction: column;
   padding: 0;
 }
 
 .conversation .recipient {
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #DEDEDE;
 }
 
 .conversation .message-list {
@@ -14,5 +14,5 @@
 }
 
 .conversation .message-sender {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #DEDEDE;
 }

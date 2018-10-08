@@ -1,6 +1,7 @@
 .conversation-details {
   align-items: center;
-  border-bottom: 1px solid #CCC;
+  background-color: #FCFCFC;
+  border-bottom: 1px solid #DEDEDE;
   display: flex;
   flex-direction: row;
   padding: .75em;
@@ -18,14 +19,15 @@
 }
 
 .conversation-details .options button {
-  background-color: #CCC;
-  border: 1px solid #CCC;
+  background-color: #DDD;
+  border: 1px solid #DDD;
   border-radius: .25em;
   cursor: pointer;
   padding: .25em .5em;
+  transition: .25s;
 }
 
 .conversation-details .options button:hover {
-  background-color: #AAA;
-  border-color: #AAA;
+  background-color: #BBB;
+  border-color: #BBB;
 }
