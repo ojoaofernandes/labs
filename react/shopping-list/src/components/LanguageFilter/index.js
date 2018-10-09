@@ -1,15 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import LanguageFilterButton from '../LanguageFilterButton';
 import './index.css';
 
-function LanguageFilter({ languages }) {
+function LanguageFilter({ languages, activeLanguageFilter }) {
   return (
-    <div>
-      Language:
+    <div className="language-filter">
       {languages.map(language => (
-        <button key={language}>{language}</button>
-      ))}
+          <LanguageFilterButton
+            key={language}
+            language={language}
+            filter={activeLanguageFilter}
+          >
+            {language}
+          </LanguageFilterButton>
+        )
+      )}
     </div>
   );
 }
+
+LanguageFilter.propTypes = {
+  languages: PropTypes.arrayOf(PropTypes.string),
+  activeLanguageFilter: PropTypes.string,
+};
 
 export default LanguageFilter;
