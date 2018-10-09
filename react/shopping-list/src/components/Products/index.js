@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from '../Input';
+import Filter from '../Filter';
 import Product from '../Product';
 import './index.css';
 
@@ -9,9 +9,7 @@ function Products({ className, products }) {
     <div className={`products ${className}`}>
       <h2 className="header">Products</h2>
 
-      <div className="filter">
-        <Input placeholder="Search..." />
-      </div>
+      <Filter />
 
       <div className="product-list">
         {products.map(product => <Product key={product.id} {...product} />)}

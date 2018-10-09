@@ -8,10 +8,6 @@
   margin: 0;
 }
 
-.products .filter {
-  padding: .75rem;
-}
-
 .products .product-list {
   border-top: 1px solid #DDD;
 }
