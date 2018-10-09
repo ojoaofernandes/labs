@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-function Input({ type, id, name, placeholder, className }) {
+function Input({ className, id, name, placeholder, type }) {
   return (
     <input
       className={`input ${className}`}

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Badge from '../Badge';
+import TextSecondary from '../TextSecondary';
 import './index.css';
 
 function Product({
@@ -13,8 +15,8 @@ function Product({
       <div className="data">
         <div className="name">{name}</div>
         <div className="details">
-          <div className="location">stocked in {location}</div>
-          <div className="price">$ {price.toFixed(2)}</div>
+          <TextSecondary>stocked in {location}</TextSecondary>
+          <Badge type="success">$ {price.toFixed(2)}</Badge>
         </div>
       </div>
     </div>

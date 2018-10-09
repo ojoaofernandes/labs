@@ -24,16 +24,3 @@
   align-items: baseline;
   justify-content: space-between;
 }
-
-.product .data .details .location {
-  font-size: .95rem;
-  color: #777;
-}
-
-.product .data .details .price {
-  color: #1C392F;
-  background-color: #91cd96;
-  padding: .25rem .5rem;
-  border-radius: 1rem;
-  font-size: .95rem;
-}
