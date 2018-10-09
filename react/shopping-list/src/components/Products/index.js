@@ -6,7 +6,15 @@ import './index.css';
 function Products({ className, products }) {
   return (
     <div className={`products ${className}`}>
-      {products.map(product => <Product key={product.id} {...product} />)}
+      <h2 className="header">Products</h2>
+
+      <div className="filter">
+        <input type="text" placeholder="Search..." />
+      </div>
+
+      <div className="product-list">
+        {products.map(product => <Product key={product.id} {...product} />)}
+      </div>
     </div>
   );
 }
