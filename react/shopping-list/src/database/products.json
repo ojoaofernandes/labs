@@ -1,13 +1,13 @@
 [
-  { "id": "3ca547ff-035d-47e3-88ab-c182ef9043c5", "location": "SP", "price": 24.99, "name": "The Hunger Games" },
-  { "id": "8feb96ae-22ad-4727-94ef-c3686e2ac7b9", "location": "PR", "price": 21.00, "name": "Harry Potter and the Philosopher's Stone" },
-  { "id": "5597790f-c52b-433d-9d04-33fe739ef750", "location": "PR", "price": 23.90, "name": "Twilight" },
-  { "id": "5471ac3c-2b20-4793-8d6d-85c3c11d0744", "location": "SP", "price": 19.35, "name": "Animal Farm: A Fairy Story" },
-  { "id": "ee663065-58d4-45bd-b119-34bff02ee79b", "location": "RJ", "price": 17.00, "name": "Divergent" },
-  { "id": "38d9429b-b3b6-4e46-abc2-7381023fc8d3", "location": "RJ", "price": 21.49, "name": "The Fault in Our Stars" },
-  { "id": "cb5fcc94-b608-4a6d-b632-f8a3c516c0df", "location": "PR", "price": 27.90, "name": "Catching Fire" },
-  { "id": "c866bf17-d82c-495e-9628-dfebd9f18e24", "location": "SP", "price": 18.99, "name": "Water for Elephants" },
-  { "id": "9d450b05-15bd-44d9-953b-047aba082567", "location": "RJ", "price": 25.49, "name": "Angels & Demons" },
-  { "id": "f517640e-ce7d-4c39-8c46-997c990a0124", "location": "SP", "price": 19.00, "name": "Pride and Prejudice" },
-  { "id": "53e9e488-4bad-4d09-b81f-1eaa80034610", "location": "PR", "price": 21.00, "name": "The Kite Runner" }
+  { "id": "3ca547ff-035d-47e3-88ab-c182ef9043c5", "language": "EN", "price": 24.99, "name": "The Hunger Games" },
+  { "id": "8feb96ae-22ad-4727-94ef-c3686e2ac7b9", "language": "PT", "price": 21.00, "name": "Harry Potter and the Philosopher's Stone" },
+  { "id": "5597790f-c52b-433d-9d04-33fe739ef750", "language": "PT", "price": 23.90, "name": "Twilight" },
+  { "id": "5471ac3c-2b20-4793-8d6d-85c3c11d0744", "language": "EN", "price": 19.35, "name": "Animal Farm: A Fairy Story" },
+  { "id": "ee663065-58d4-45bd-b119-34bff02ee79b", "language": "FR", "price": 17.00, "name": "Divergent" },
+  { "id": "38d9429b-b3b6-4e46-abc2-7381023fc8d3", "language": "FR", "price": 21.49, "name": "The Fault in Our Stars" },
+  { "id": "cb5fcc94-b608-4a6d-b632-f8a3c516c0df", "language": "PT", "price": 27.90, "name": "Catching Fire" },
+  { "id": "c866bf17-d82c-495e-9628-dfebd9f18e24", "language": "EN", "price": 18.99, "name": "Water for Elephants" },
+  { "id": "9d450b05-15bd-44d9-953b-047aba082567", "language": "FR", "price": 25.49, "name": "Angels & Demons" },
+  { "id": "f517640e-ce7d-4c39-8c46-997c990a0124", "language": "EN", "price": 19.00, "name": "Pride and Prejudice" },
+  { "id": "53e9e488-4bad-4d09-b81f-1eaa80034610", "language": "PT", "price": 21.00, "name": "The Kite Runner" }
 ]

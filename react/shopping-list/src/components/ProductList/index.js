@@ -16,7 +16,7 @@ ProductList.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    location: PropTypes.string.isRequired,
+    language: PropTypes.string.isRequired,
   })).isRequired,
 };
 

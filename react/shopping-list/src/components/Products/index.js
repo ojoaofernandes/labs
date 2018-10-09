@@ -21,7 +21,10 @@ Products.defaultProps = {
 Products.propTypes = {
   className: PropTypes.string,
   products: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    language: PropTypes.string.isRequired,
   })).isRequired,
 };
 

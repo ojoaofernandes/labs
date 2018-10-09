@@ -5,7 +5,7 @@ import TextSecondary from '../TextSecondary';
 import './index.css';
 
 function Product({
-  id, name, price, location,
+  id, name, price, language,
 }) {
   return (
     <div className="product" data-id={id}>
@@ -15,7 +15,7 @@ function Product({
       <div className="data">
         <div className="name">{name}</div>
         <div className="details">
-          <TextSecondary>{`stocked in ${location}`}</TextSecondary>
+          <TextSecondary>{`Language: ${language}`}</TextSecondary>
           <Badge type="success">{`$ ${price.toFixed(2)}`}</Badge>
         </div>
       </div>
@@ -27,7 +27,7 @@ Product.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  location: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
 };
 
 export default Product;

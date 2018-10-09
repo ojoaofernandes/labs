@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-function Badge({children, className, id, type}) {
+function Badge({ children, className, id, type }) {
   return (
     <span className={`badge ${type} ${className}`} id={id}>
       {children}
