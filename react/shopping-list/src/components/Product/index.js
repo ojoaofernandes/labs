@@ -7,11 +7,16 @@ function Product({
 }) {
   return (
     <div className="product" data-id={id}>
-      {name}
-      ,
-      {price}
-      ,
-      {location}
+      <div className="thumb">
+        <div>{name.slice(0, 3)}</div>
+      </div>
+      <div className="data">
+        <div className="name">{name}</div>
+        <div className="details">
+          <div className="location">stocked in {location}</div>
+          <div className="price">$ {price.toFixed(2)}</div>
+        </div>
+      </div>
     </div>
   );
 }
