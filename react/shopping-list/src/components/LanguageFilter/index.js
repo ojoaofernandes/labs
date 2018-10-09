@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import LanguageFilterButton from '../LanguageFilterButton';
 import './index.css';
 
-function LanguageFilter({ languages, activeLanguageFilter }) {
+function LanguageFilter({ languages, activeLanguageFilter, onFilterChange }) {
   return (
     <div className="language-filter">
       {languages.map(language => (
@@ -11,6 +11,7 @@ function LanguageFilter({ languages, activeLanguageFilter }) {
             key={language}
             language={language}
             filter={activeLanguageFilter}
+            onClick={onFilterChange(language)}
           >
             {language}
           </LanguageFilterButton>
@@ -21,8 +22,9 @@ function LanguageFilter({ languages, activeLanguageFilter }) {
 }
 
 LanguageFilter.propTypes = {
+  activeLanguageFilter: PropTypes.string.isRequired,
   languages: PropTypes.arrayOf(PropTypes.string),
-  activeLanguageFilter: PropTypes.string,
+  onFilterChange: PropTypes.func.isRequired,
 };
 
 export default LanguageFilter;
