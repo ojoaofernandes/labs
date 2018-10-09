@@ -13,7 +13,10 @@ function ProductList({ products }) {
 
 ProductList.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    location: PropTypes.string.isRequired,
   })).isRequired,
 };
 

@@ -15,8 +15,8 @@ function Product({
       <div className="data">
         <div className="name">{name}</div>
         <div className="details">
-          <TextSecondary>stocked in {location}</TextSecondary>
-          <Badge type="success">$ {price.toFixed(2)}</Badge>
+          <TextSecondary>{`stocked in ${location}`}</TextSecondary>
+          <Badge type="success">{`$ ${price.toFixed(2)}`}</Badge>
         </div>
       </div>
     </div>
