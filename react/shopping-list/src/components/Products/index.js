@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Input from '../Input';
 import Product from '../Product';
 import './index.css';
 
@@ -9,7 +10,7 @@ function Products({ className, products }) {
       <h2 className="header">Products</h2>
 
       <div className="filter">
-        <input type="text" placeholder="Search..." />
+        <Input placeholder="Search..." />
       </div>
 
       <div className="product-list">
