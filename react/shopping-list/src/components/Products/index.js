@@ -1,19 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Filter from '../Filter';
-import Product from '../Product';
+import ProductList from '../ProductList';
 import './index.css';
 
 function Products({ className, products }) {
   return (
     <div className={`products ${className}`}>
       <h2 className="header">Products</h2>
-
       <Filter />
-
-      <div className="product-list">
-        {products.map(product => <Product key={product.id} {...product} />)}
-      </div>
+      <ProductList products={products} />
     </div>
   );
 }
