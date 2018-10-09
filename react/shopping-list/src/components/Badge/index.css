@@ -6,5 +6,6 @@
 
 .badge.success {
   background-color: #91cd96;
+  box-shadow: 0 0 .15rem #363636;
   color: #1C392F;
 }

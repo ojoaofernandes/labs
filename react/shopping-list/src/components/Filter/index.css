@@ -1,3 +1,7 @@
 .filter {
   padding: .75rem;
 }
+
+.filter .language-filter {
+  margin-top: .75rem;
+}

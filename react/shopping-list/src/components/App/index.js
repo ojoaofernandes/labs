@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <Products className="col-4" />
+          <Products className="col-5" />
         </div>
       </div>
     );
