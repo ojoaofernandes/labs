@@ -1,0 +1,9 @@
+.shopping-list {
+  padding: 0;
+  border: 1px solid #DDD;
+}
+
+.shopping-list .header {
+  text-align: center;
+  margin: 0;
+}

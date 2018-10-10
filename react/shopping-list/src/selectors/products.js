@@ -14,5 +14,5 @@ export const getVisibleProducts = createSelector(
   getActiveLanguageFilter, getProducts,
   (languageFilter, products) => (languageFilter === 'ALL'
     ? products
-    : products.filter(prod => prod.language === languageFilter))
+    : products.filter(product => product.language === languageFilter))
 );

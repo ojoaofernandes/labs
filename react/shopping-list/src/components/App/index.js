@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Products from '../../containers/Products';
+import Products from '../Products';
 import SessionTime from '../../containers/SessionTime';
-import ShoppingList from '../ShoppingList';
+import ShoppingList from '../../containers/ShoppingList';
 import './index.css';
 
 class App extends Component {
