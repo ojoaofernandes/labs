@@ -1,11 +1,8 @@
+import typeToReducer from 'type-to-reducer';
 import { GET_PRODUCTS } from '../constants/products';
 
 const initialState = [];
 
-export default function (state = initialState, { type, payload }) {
-  if (type === GET_PRODUCTS) {
-    return payload;
-  }
-
-  return state;
-}
+export default typeToReducer({
+  [GET_PRODUCTS]: (_, { payload }) => payload
+}, initialState);
