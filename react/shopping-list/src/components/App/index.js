@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Products from '../Products';
 import SessionTime from '../../containers/SessionTime';
-import ShoppingList from '../../containers/ShoppingList';
+import ShoppingList from '../ShoppingList';
 import './index.css';
 
 class App extends Component {

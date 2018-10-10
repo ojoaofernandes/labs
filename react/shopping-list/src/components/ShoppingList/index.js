@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProductTable from '../ProductTable';
+import ProductTable from '../../containers/ProductTable';
 import './index.css';
 
-function ShoppingList({ className, products }) {
+function ShoppingList({ className }) {
   return (
     <div className={`shopping-list ${className}`}>
       <h2 className="header">Shopping list</h2>
-      <ProductTable products={products} />
+      <ProductTable />
     </div>
   );
 }
@@ -18,12 +18,6 @@ ShoppingList.defaultProps = {
 
 ShoppingList.propTypes = {
   className: PropTypes.string,
-  products: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    language: PropTypes.string.isRequired,
-  })).isRequired,
 };
 
 export default ShoppingList;
