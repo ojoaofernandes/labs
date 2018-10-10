@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
+import { getVisibleProducts } from '../selectors/products';
 import Products from '../components/Products';
-import { getVisibleProductsSelector } from '../selectors/products';
 
 const mapStateToProps = state => ({
-  products: getVisibleProductsSelector(state),
+  products: getVisibleProducts(state),
 });
 
 export default connect(mapStateToProps)(Products);

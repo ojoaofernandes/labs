@@ -10,12 +10,22 @@ export const getAvailableLanguages = createSelector(
     .filter((el, i, arr) => arr.indexOf(el) === i)]
 );
 
-export const getVisibleProductsSelector = createSelector(
-  getActiveLanguageFilter, getProducts,
-  (languageFilter, products) => {
-    console.log('getVisibleProducts selector');
-    return languageFilter === 'ALL'
-      ? products
-      : products.filter(prod => prod.language === languageFilter);
-  }
-);
+// export const getVisibleProducts = createSelector(
+//   getActiveLanguageFilter, getProducts,
+//   (languageFilter, products) => {
+//     console.log('getVisibleProducts selector');
+//     return languageFilter === 'ALL'
+//       ? products
+//       : products.filter(prod => prod.language === languageFilter);
+//   }
+// );
+
+export const getVisibleProducts = (state) => {
+  console.log('getVisibleProducts selector');
+  const languageFilter = getActiveLanguageFilter(state);
+  const products = getProducts(state);
+
+  return languageFilter === 'ALL'
+    ? products
+    : products.filter(prod => prod.language === languageFilter);
+};
