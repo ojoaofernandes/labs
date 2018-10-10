@@ -5,6 +5,6 @@ import sessionTime from './sessionTime';
 
 export default combineReducers({
   products,
+  sessionTime,
   activeLanguageFilter: languageFilter,
-  sessionTime: sessionTime,
 });

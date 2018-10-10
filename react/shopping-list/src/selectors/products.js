@@ -5,18 +5,14 @@ const getActiveLanguageFilter = ({ activeLanguageFilter }) => activeLanguageFilt
 
 export const getAvailableLanguages = createSelector(
   getProducts,
-  products => {
-    return ['ALL', ...products
-      .map(product => product.language)
-      .filter((el, i, arr) => arr.indexOf(el) === i)];
-  }
+  products => ['ALL', ...products
+    .map(product => product.language)
+    .filter((el, i, arr) => arr.indexOf(el) === i)]
 );
 
 export const getVisibleProducts = createSelector(
   getActiveLanguageFilter, getProducts,
-  (languageFilter, products) => {
-    return languageFilter === 'ALL'
-      ? products
-      : products.filter(prod => prod.language === languageFilter);
-  }
+  (languageFilter, products) => (languageFilter === 'ALL'
+    ? products
+    : products.filter(prod => prod.language === languageFilter))
 );

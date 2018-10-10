@@ -1,5 +1,5 @@
-import { connect } from "react-redux";
-import SessionTime from "../components/SessionTime";
+import { connect } from 'react-redux';
+import SessionTime from '../components/SessionTime';
 
 const mapStateToProps = ({ sessionTime }) => ({ sessionTime });
 
