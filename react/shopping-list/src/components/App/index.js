@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Products from '../../containers/Products';
+import SessionTime from '../../containers/SessionTime';
 import ShoppingList from '../ShoppingList';
+import './index.css';
 
 class App extends Component {
   componentDidMount() {
@@ -19,11 +21,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="app container-fluid">
         <div className="row">
           <Products className="col-5" />
           <ShoppingList className="col-7" />
         </div>
+
+        <SessionTime />
       </div>
     );
   }

@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SessionTime from '../../containers/SessionTime';
 import './index.css';
 
 function ShoppingList({ className }) {
   return (
     <div className={`shopping-list ${className}`}>
-      <SessionTime />
     </div>
   );
 }

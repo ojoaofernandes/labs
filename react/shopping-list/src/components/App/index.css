@@ -1,0 +1,5 @@
+.app .session-time {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+}
