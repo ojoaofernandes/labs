@@ -11,7 +11,7 @@ function LanguageFilter({ languages, activeLanguageFilter, onFilterChange }) {
             key={language}
             language={language}
             filter={activeLanguageFilter}
-            onClick={onFilterChange(language)}
+            onClick={() => onFilterChange(language)}
           >
             {language}
           </LanguageFilterButton>

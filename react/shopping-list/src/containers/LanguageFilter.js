@@ -8,8 +8,6 @@ const mapStateToProps = state => ({
   activeLanguageFilter: state.activeLanguageFilter,
 });
 
-const mapDispatchToProps = dispatch => ({
-  onFilterChange: filter => () => dispatch(setLanguageFilter(filter)),
-});
+const mapDispatchToProps = { onFilterChange: setLanguageFilter };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageFilter);
