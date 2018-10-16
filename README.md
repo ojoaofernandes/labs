@@ -15,6 +15,7 @@ I appreciate some tips, so feel free to contribute.
 
 - [Node.js](nodejs/)
 - [React](react/)
+- [Redux](redux/)
 
 ## License
 
