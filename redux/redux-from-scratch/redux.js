@@ -1,4 +1,4 @@
-const createStore = (reducer) => {
+const createStore = (reducer, applyMiddleware) => {
   let currentState;
   let currentListeners = [];
   let currentReducer = reducer;
@@ -13,7 +13,7 @@ const createStore = (reducer) => {
   const subscribe = (newListener) => {
     currentListeners = [...currentListeners, newListener];
     return () => {
-      currentListeners = currentListeners.filter(listener => listener != newListener)
+      currentListeners = currentListeners.filter((listener) => listener != newListener)
     }
   }
 
@@ -21,18 +21,30 @@ const createStore = (reducer) => {
     currentReducer = nextReducer;
   }
 
-  dispatch({});
-
-  return {
+  const store = {
     getState,
     dispatch,
     subscribe,
     replaceReducer,
   };
+
+  if (applyMiddleware !== undefined) {
+    applyMiddleware(store);
+  }
+
+  dispatch({});
+
+  return store;
 };
 
-const combineReducers = reducers => (state = {}, action) => 
+const combineReducers = (reducers) => (state = {}, action) => 
   Object.keys(reducers).reduce((nextState, key) => ({
     ...nextState, 
     [key]: reducers[key](state[key], action)
   }), {});
+
+const applyMiddleware = (...middlewares) => (store) => {
+  [...middlewares].reverse().forEach((middleware) => {
+    store.dispatch = middleware(store);
+  });
+};

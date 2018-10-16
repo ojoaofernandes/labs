@@ -21,17 +21,38 @@ const notesReducer = (state = [], action) => {
 const rootReducer = combineReducers({
   counter: counterReducer,
   notes: notesReducer,
-})
+});
 
-const store = createStore(rootReducer);
+const loggerMiddleware = (store) => {
+  const next = store.dispatch;
+  
+  return (action) => {
+    console.log(`\n-- dispatching an ${action.type} action`);
+    next(action);
+    console.log('-- new state', store.getState());
+  }
+};
+
+const loggerMiddleware2 = (store) => {
+  const next = store.dispatch;
+  
+  return (action) => {
+    console.log(`\n-- dispatching 2 an ${action.type} action`);
+    next(action);
+    console.log('-- new state 2', store.getState());
+  }
+};
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(
+    loggerMiddleware,
+    loggerMiddleware2,
+  ),
+);
 
 console.log('\n-- initial state');
 console.log(store.getState());
 
-console.log('\n-- dispatching an INCREMENT action');
 store.dispatch({ type: 'INCREMENT' });
-console.log(store.getState());
-
-console.log('\n-- dispatching an ADD_NOTE action');
 store.dispatch({ type: 'ADD_NOTE', payload: 'Text' });
-console.log(store.getState());
