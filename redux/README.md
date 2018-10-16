@@ -14,7 +14,7 @@ This complexity is difficult to handle as we are mixing mutation and asynchronic
 
 ### Single source of truth
 
-The state of the whole application is stored in an object tree within **a single store**. This makes it easier to debug or inspect the application. Also, it minimizes the complexity to implement functionalities which has been tradicionally difficult, such as undo/redo.
+The state of the whole application is stored in an object tree within a single store. This makes it easier to debug or inspect the application. Also, it minimizes the complexity to implement functionalities which has been tradicionally difficult, such as undo/redo.
 
 ### State is read-only
 
@@ -28,21 +28,50 @@ To specify how the state tree is transformed by actions, you write reducers. Red
 
 ### Actions
 
-**Actions are payloads of information that send data from application to store**. They are the only source of information for the store. It is sent to the store using ```store.dispatch()```. 
+Actions are payloads of information that send data from application to store. They are the only source of information for the store. It is sent to the store using ```store.dispatch()```.
 
 Here is an example:
 
 ```
-{
+const action = {
   type: 'ADD_TODO',
   text: 'My todo item text.'
 }
+
+store.dispatch(action);
 ```
 
 Actions are plain JavaScript objects and must have a ```type``` property that indicates the type of actions being performed. Other than ```type```, the structure of an action is flexible. Usually, FSA ([Flux Standart Action](https://github.com/redux-utilities/flux-standard-action)) is adopted.
 
+#### Action Creators
+
+Action creators are functions that create actions by simply returning an action:
+
+```
+function addTodo(text) {
+  return {
+    type: 'ADD_TODO',
+    text
+  };
+}
+
+store.dispatch(addtodo('My todo item text.'));
+```
+
 ### Reducers
 
+Reducers specify how the application's state changes in response to actions sent to the store. It is a pure function that takes the previous state and an action, and returns the next state.
 
+```
+(previousState, action) => newState
+```
+
+Things that should be avoided inside a reducer:
+
+* Mutate its arguments;
+* Perform side effects like API calls and routing transitiions;
+* Call non-pure functions, e.g. ```Date.now()``` or ```Math.randon()```.
+
+A reducer is a pure function. Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.
 
 ### Store
