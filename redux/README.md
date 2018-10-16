@@ -4,7 +4,7 @@
 
 ## Motivation
 
-SPA (single-page applications) have become complicated and the code must manage more state than ever before. This state can include server responses, cached data, as well UI data such as selected tabs, spinners, pagination controls, and so on. At some point it is so hard to understand what happens that the application becomes opaque and non-deterministic.
+SPA (single-page application) has become complicated and the code must manage more state than ever before. This state can include server responses, cached data, as well as UI data such as selected tabs, spinners, pagination controls, and so on. At some point, it is so hard to understand what happens that the application becomes opaque and non-deterministic.
 
 This complexity is difficult to handle as we are mixing mutation and asynchronicity. Both can be great in separation, but together they create a perfect mess. Libraries like [React](https://reactjs.org/) attempt to solve this problem in the view layer. However, managing the state of the data is an empty field. This is where Redux comes in action.
 
@@ -14,7 +14,7 @@ This complexity is difficult to handle as we are mixing mutation and asynchronic
 
 ### Single source of truth
 
-The state of the whole application is stored in an object tree within a single store. This makes it easier to debug or inspect the application. Also, it minimizes the complexity to implement functionalities which has been tradicionally difficult, such as undo/redo.
+The state of the whole application is stored in an object tree within a single store. This makes it easier to debug or inspect the application. Also, it minimizes the complexity to implement functionalities which have been traditionally difficult, such as undo/redo.
 
 ### State is read-only
 
@@ -22,7 +22,7 @@ The only way to change the state is to emit an action, an object describing what
 
 ### Changes are made with pure functions
 
-To specify how the state tree is transformed by actions, you write reducers. Reducers are pure functions that take the previous state and an action, and return the next state. The next state should be new objects, instead of mutating the previus one.
+To specify how the state tree is transformed by actions, you write reducers. Reducers are pure functions that take the previous state and an action and return the next state. The next state should be new objects, instead of mutating the previous one.
 
 ## Basics
 
@@ -60,7 +60,7 @@ store.dispatch(addtodo('My todo item text.'));
 
 ### Reducers
 
-Reducers specify how the application's state changes in response to actions sent to the store. It is a pure function that takes the previous state and an action, and returns the next state.
+Reducers specify how the application's state changes in response to actions sent to the store. It is a pure function that takes the previous state and an action and returns the next state.
 
 ```
 (previousState, action) => newState
@@ -69,9 +69,9 @@ Reducers specify how the application's state changes in response to actions sent
 Things that should be avoided inside a reducer:
 
 * Mutate its arguments;
-* Perform side effects like API calls and routing transitiions;
+* Perform side effects like API calls and routing transitions;
 * Call non-pure functions, e.g. ```Date.now()``` or ```Math.randon()```.
 
-A reducer is a pure function. Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.
+A reducer is a pure function. **Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.**
 
 ### Store
