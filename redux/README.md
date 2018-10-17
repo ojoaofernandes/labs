@@ -32,7 +32,7 @@ Actions are payloads of information that send data from application to store. Th
 
 Here is an example:
 
-```
+```javascript
 const action = {
   type: 'ADD_TODO',
   text: 'My todo item text.'
@@ -47,7 +47,7 @@ Actions are plain JavaScript objects and must have a ```type``` property that in
 
 Action creators are functions that create actions by simply returning an action:
 
-```
+```javascript
 function addTodo(text) {
   return {
     type: 'ADD_TODO',
@@ -74,4 +74,38 @@ Things that should be avoided inside a reducer:
 
 A reducer is a pure function. **Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.**
 
+Here is an example:
+
+```javascript
+function todoReducer(currentState = [], action) {
+  if (action.type === 'ADD_TODO') {
+    return [
+      ...currentState, 
+      { text, completed: false }
+    ]
+  }
+
+  return currentState;
+}
+```
+
+Note that:
+
+1. ```currentState``` argument has a default value to be used as initial state;
+2. The reducer only handles with the ```ADD_TODO``` action type;
+3. The state is not been mutated, a new array is returned;
+4. It is important to return the current state for any unknown action.
+
 ### Store
+
+The store is the object that brings actions and reducers together. It has the following responsibilities:
+
+* Holds application state;
+* Allows access to state via ```getState()```;
+* Allows state to be updated via ```dispatch(action)```;
+* Registers listeners via ```subscribe(listener)```;
+* Handles unregistering of listeners via the function returned by ```subscribe(listener)```;
+
+### Data Flow
+
+Redux architecture revolves around a strict unidirectional data flow. This means that all data in an application follow the same lifecycle pattern, making the logic of the 
