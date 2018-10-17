@@ -108,4 +108,12 @@ The store is the object that brings actions and reducers together. It has the fo
 
 ### Data Flow
 
-Redux architecture revolves around a strict unidirectional data flow. This means that all data in an application follow the same lifecycle pattern, making the logic of the 
+Redux architecture turns around a strict unidirectional data flow. This means that all data in an application follows the same lifecycle pattern, making the logic of the application more predictale and easier to understand. It also motivates data normalization, so you don't end up with multiple, independent copies of the same data that are unaware of one another.
+
+The data lifecycle in any Redux application follows these 4 steps:
+
+1. A ```store.dispatch(action)``` is called;
+2. The Redux store calls the reducer function;
+3. The reducer outputs a brand-new single state tree;
+4. The Redux store saves the complete state tree returned by the reducer.
+
