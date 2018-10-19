@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../Header';
 import PostList from '../../containers/PostList';
+import FetchedTopics from '../../containers/FetchedTopics';
 
 const currentTopic = 'Microservices';
-const fetchedTopics = ['JavaScript', 'Apache Kafka', 'Docker'];
 
 function App() {
   return (
@@ -19,13 +19,9 @@ function App() {
           {currentTopic}
           <button type="button">Refresh</button>
         </div>
-
-        <div>
-          Jump to:
-          {fetchedTopics.join(' | ')}
-        </div>
       </div>
 
+      <FetchedTopics />
       <PostList />
     </div>
   );
