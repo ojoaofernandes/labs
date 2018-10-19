@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../Header';
 
 const currentTopic = 'Microservices';
 const fetchedTopics = ['JavaScript', 'Apache Kafka', 'Docker'];
@@ -13,7 +14,7 @@ const items = [
 function App() {
   return (
     <div className="app">
-      <h1>Reddit API Consumer</h1>
+      <Header />
 
       <div>
         <h2>Search</h2>
