@@ -1,19 +1,15 @@
 import React from 'react';
 import Header from '../Header';
-import PostList from '../../containers/PostList';
-import FetchedTopics from '../../containers/FetchedTopics';
+import Search from '../../containers/Search';
 import CurrentTopic from '../../containers/CurrentTopic';
+import FetchedTopics from '../../containers/FetchedTopics';
+import PostList from '../../containers/PostList';
 
 function App() {
   return (
     <div className="app">
       <Header />
-
-      <div>
-        <h2>Search</h2>
-        <input type="text" placeholder="Search..." />
-      </div>
-
+      <Search placeholder="Search..." />
       <CurrentTopic />
       <FetchedTopics />
       <PostList />
