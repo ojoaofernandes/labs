@@ -1,8 +1,9 @@
 const initialState = {
+  currentTopic: 'microservices',
   fetchedTopics: [
-    'JavaScript',
-    'Apache Kafka',
-    'Docker',
+    'javascript',
+    'apache kafka',
+    'docker',
   ],
   posts: [
     { id: 'a', title: 'Test' },
