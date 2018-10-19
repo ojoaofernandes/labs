@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import Search from '../components/Search';
+import KeyPressInput from '../components/KeyPressInput';
 
 const mapDispatchToProps = {
-  searchHandler: (e) => {
+  onKeyPress: (e) => {
     console.log(e);
     return { type: '' };
   },
 };
 
-export default connect(null, mapDispatchToProps)(Search);
+export default connect(null, mapDispatchToProps)(KeyPressInput);
