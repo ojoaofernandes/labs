@@ -11,7 +11,7 @@ function FetchedTopics({ topics }) {
 }
 
 FetchedTopics.propTypes = {
-  topics: PropTypes.string.isRequired,
+  topics: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default FetchedTopics;
