@@ -3,6 +3,7 @@ import Header from '../Header';
 import CurrentTopic from '../../containers/CurrentTopic';
 import FetchedTopics from '../../containers/FetchedTopics';
 import PostList from '../../containers/PostList';
+import './index.css';
 
 function App() {
   return (
