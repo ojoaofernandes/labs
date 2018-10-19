@@ -2,8 +2,7 @@ import React from 'react';
 import Header from '../Header';
 import PostList from '../../containers/PostList';
 import FetchedTopics from '../../containers/FetchedTopics';
-
-const currentTopic = 'Microservices';
+import CurrentTopic from '../../containers/CurrentTopic';
 
 function App() {
   return (
@@ -13,14 +12,9 @@ function App() {
       <div>
         <h2>Search</h2>
         <input type="text" placeholder="Search..." />
-
-        <div>
-          Current Topic:
-          {currentTopic}
-          <button type="button">Refresh</button>
-        </div>
       </div>
 
+      <CurrentTopic />
       <FetchedTopics />
       <PostList />
     </div>
