@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Search({ placeholder, searchHandler }) {
+function Search({ className, placeholder, searchHandler }) {
   return (
-    <div>
-      <input
-        type="text"
-        placeholder={placeholder}
-        onKeyPress={searchHandler}
-      />
-    </div>
+    <input
+      type="text"
+      className={className}
+      placeholder={placeholder}
+      onKeyPress={searchHandler}
+    />
   );
 }
 
+Search.defaultProps = {
+  className: '',
+};
+
 Search.propTypes = {
+  className: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
   searchHandler: PropTypes.func.isRequired,
 };

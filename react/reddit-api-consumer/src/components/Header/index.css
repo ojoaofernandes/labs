@@ -1,0 +1,19 @@
+.header {
+  background-color: #FF4724;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.header .title {
+  color: #FFFFFF;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.header .input {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: .5rem;
+}
