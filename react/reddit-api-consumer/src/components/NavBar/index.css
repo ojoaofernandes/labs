@@ -1,9 +1,12 @@
 .nav {
   background-color: #DEDEDE;
+  padding: 1.5rem 0;
+}
+
+.nav .container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 1.5rem 0;
+  justify-content: space-between;
 }
 
 .nav .fetched-topics {

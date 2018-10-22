@@ -6,8 +6,10 @@ import './index.css';
 function NavBar() {
   return (
     <nav className="nav">
-      <CurrentTopic />
-      <FetchedTopics />
+      <div className="container">
+        <CurrentTopic />
+        <FetchedTopics />
+      </div>
     </nav>
   );
 }
