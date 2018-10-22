@@ -7,7 +7,7 @@ function Post({ date, description, title }) {
     <div className="post">
       <h3 className="title">{title}</h3>
       <p className="description">{description}</p>
-      <span className="date secondary-text">
+      <span className="date text-secondary">
         Posted at
         {date}
       </span>

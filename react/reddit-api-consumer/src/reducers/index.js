@@ -1,5 +1,5 @@
 const initialState = {
-  currentTopic: 'microservices',
+  currentTopic: {},
   fetchedTopics: [
     'javascript',
     'apache kafka',
