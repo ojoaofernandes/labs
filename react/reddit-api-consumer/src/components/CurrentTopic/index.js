@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 function CurrentTopic({ topic }) {
   return (
     <div>
-      Current Topic:
-      {topic}
-      <button type="button">Refresh</button>
+      <h3>Current Topic</h3>
+      <div>
+        {topic}
+        <button type="button">Refresh</button>
+      </div>
     </div>
   );
 }

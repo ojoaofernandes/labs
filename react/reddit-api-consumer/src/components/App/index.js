@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../Header';
-import CurrentTopic from '../../containers/CurrentTopic';
-import FetchedTopics from '../../containers/FetchedTopics';
+import NavBar from '../NavBar';
 import PostList from '../../containers/PostList';
 import './index.css';
 
@@ -9,8 +8,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <CurrentTopic />
-      <FetchedTopics />
+      <NavBar />
       <PostList />
     </div>
   );

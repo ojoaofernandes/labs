@@ -1,0 +1,11 @@
+.nav {
+  background-color: #DEDEDE;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+}
+
+.nav .fetched-topics {
+  text-align: right;
+}
