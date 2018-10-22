@@ -12,7 +12,7 @@ function CurrentTopic({ topic }) {
         <button type="button">Refresh</button>
       </div>
 
-      <div className="secondary-text">Updated at 11:10 am</div>
+      <span className="secondary-text">Updated at 11:10 am</span>
     </div>
   );
 }
