@@ -7,10 +7,15 @@ function FetchedTopics({ topics }) {
     <div className="fetched-topics">
       <h3>Jump To</h3>
 
-      <select>
-        <option>Select topic...</option>
-        {topics.map(t => <option value={t} key={t}>{t}</option>)}
-      </select>
+      {topics.length === 0
+        ? <div className="topic text-secondary">No topics fetched yet.</div>
+        : (
+          <select>
+            <option>Select topic...</option>
+            {topics.map(t => <option value={t} key={t}>{t}</option>)}
+          </select>
+        )
+      }
     </div>
   );
 }

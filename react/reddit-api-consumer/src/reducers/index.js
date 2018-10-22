@@ -1,10 +1,6 @@
 const initialState = {
   currentTopic: {},
-  fetchedTopics: [
-    'javascript',
-    'apache kafka',
-    'docker',
-  ],
+  fetchedTopics: [],
   posts: [
     { id: 'a', title: 'Test' },
     { id: 'b', title: 'Test' },
