@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './index.css';
 
 function CurrentTopic({ topic }) {
   return (
-    <div>
+    <div className="current-topic">
       <h3>Current Topic</h3>
       <div>
         {topic}
