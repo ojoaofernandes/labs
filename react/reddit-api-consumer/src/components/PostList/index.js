@@ -4,6 +4,8 @@ import Post from '../Post';
 import './index.css';
 
 function PostList({ posts }) {
+  if (posts.length === 0) return null;
+
   return (
     <div className="post-list">
       <div className="container">

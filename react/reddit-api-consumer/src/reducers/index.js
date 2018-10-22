@@ -1,13 +1,7 @@
 const initialState = {
   currentTopic: {},
   fetchedTopics: [],
-  posts: [
-    { id: 'a', title: 'Test' },
-    { id: 'b', title: 'Test' },
-    { id: 'c', title: 'Test' },
-    { id: 'f', title: 'Test' },
-    { id: 'e', title: 'Test' },
-  ],
+  posts: [],
 };
 
 function rootReducer(state = initialState, action) {
