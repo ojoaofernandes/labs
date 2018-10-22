@@ -1,9 +1,17 @@
 .current-topic h3 {
   font-size: 1rem;
-  margin-bottom: .3rem;
   text-transform: uppercase;
+}
+
+.current-topic .topic {
+  margin: .5rem 0;
 }
 
 .current-topic button {
   margin-left: .5rem;
+}
+
+.current-topic .secondary-text {
+  color: #444;
+  font-size: .8rem;
 }
