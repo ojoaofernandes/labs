@@ -6,9 +6,10 @@ function FetchedTopics({ topics }) {
   return (
     <div className="fetched-topics">
       <h3>Jump To</h3>
-      <div>
-        {topics.join(' | ')}
-      </div>
+      <select>
+        <option>Select topic...</option>
+        {topics.map(t => <option value={t} key={t}>{t}</option>)}
+      </select>
     </div>
   );
 }
